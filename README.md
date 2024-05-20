@@ -54,33 +54,37 @@ Problems for usage in production:
 
 ### preparation
 
-install chemistry-cmislib python3 module from source  
-    $ mkdir ~/src
-    $ cd ~/src
-    $ git clone https://github.com/i-love-coffee-i-love-tea/chemistry-cmislib
-    $ pip install ~/src/chemistry-cmislib
+install chemistry-cmislib python3 module from source
+
+	$ mkdir ~/src
+	$ cd ~/src
+	$ git clone https://github.com/i-love-coffee-i-love-tea/chemistry-cmislib
+	$ pip install ~/src/chemistry-cmislib
 
 ### without virtual environment
 
-install python modules 
-    $ apt install python3-fuse python3-urllib3
+install python modules
+
+	$ apt install python3-fuse python3-urllib3
+ 
 mount a CMIS repository
-    $ python3 cmis-fuse.py <cmis-browser-url> <repository-id> <mountpoint>
+
+	$ python3 cmis-fuse.py <cmis-browser-url> <repository-id> <mountpoint>
 
 
 ### in a python virtual environment
 
 mount a repository
-	$ cd scripts
-    $ ./run-dev-loop.sh ../cmis-fuse.py cmis-browser-url> <repository-id> <mountpoint>
 
+	$ cd scripts
+	$ ./run-dev-loop.sh ../cmis-fuse.py cmis-browser-url> <repository-id> <mountpoint>
 
 ### dev loop helper
 
 mount the filesystem once and remount it if the implementation script is modified
 
 	$ cd scripts
-    $ ./run-dev-loop.sh ../cmis-fuse.py <cmis-browser-url> <repository-id> <mountpoint>
+	$ ./run-dev-loop.sh ../cmis-fuse.py <cmis-browser-url> <repository-id> <mountpoint>
 
 example
 
